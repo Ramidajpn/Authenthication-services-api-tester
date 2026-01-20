@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Testing</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>🍡API Testing</h2>
+
+    <!-- Authen Service URL Section -->
+    <label>🌷Authen Service URL</label>
+    <input type="text" id="authServiceUrl" placeholder="Enter Authen Service URL (e.g., https://friend-authen-service.onrender.com/auth)">
+
+    <!-- Credential Section -->
+    <label>✨Credential</label>
+    <input type="text" id="clientId" placeholder="Client ID">
+    <input type="text" id="clientSecret" placeholder="Client Secret">
+    <button onclick="requestToken()">Request Token</button>
+
+    <!-- Call Data API Section -->
+    <label>🧁Call Data API</label>
+    <input type="text" id="targetUrl" placeholder="Enter Data API URL (e.g., https://friend-data-service.onrender.com/data)">
+    <button id="requestDataBtn" onclick="requestData()" disabled>Request Data</button>
+
+    <!-- JWT Token Section -->
+    <label>🪄JWT Token</label>
+    <textarea id="jwtToken" readonly>Token will appear here</textarea>
+
+    <!-- Result Section -->
+    <label>🫧Result</label>
+    <textarea id="result" readonly>Result from API will appear here</textarea>
+  </div>
+
+  <div class="animated-sticker"></div>
+  <div class="animated-sticker2"></div>
+  <div class="animated-sticker3"></div>
+  <div class="animated-sticker4"></div>
+  <script src="script.js"></script>
+</body>
+</html>

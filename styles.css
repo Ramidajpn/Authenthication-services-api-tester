@@ -1,0 +1,179 @@
+body {
+    font-family: Libre Baskerville, dancing script;
+    background-image: url('https://i.pinimg.com/1200x/70/41/00/70410064d1703c15cab12a8bcd3651e6.jpg'); /* Replace with the path to your image */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .container {
+    background-color: white;
+    padding: 30px;
+    width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .container::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(to right, #fee0e1, #f1aebb);
+    border-radius: 20px; /* Slightly larger than container's border-radius */
+    z-index: -1;
+  }
+  
+  
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ef88a2;
+    font-weight: 900;
+    -webkit-text-stroke: 0.5px #fee0e1; /* Adds a black stroke with 1px width */ /* Optional: Adds a shadow for better visibility */
+    font-size: 40px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color:#fe9fac
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #d06697;
+    opacity: 0.7;
+    border: 2px solid rgb(216, 142, 196); /* Sets the border color to pink */
+    transition: all 0.3s ease; /* Smooth transition for color changes */
+  }
+
+  input:focus, textarea:focus {
+    border-color: #d38ed6; /* Change border color when focused */
+    color: #474444; /* Darker text color when focused */
+    opacity: 1; /* Full opacity when focused */
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(211, 142, 214, 0.5); /* Add a subtle glow effect */
+  }
+  
+  /* Change the color of placeholder text */
+  input::placeholder, 
+  textarea::placeholder {
+      color: #d06697; /* Set the placeholder text color */
+      opacity: 0.7; /* Ensure the placeholder is fully opaque */
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d38ed6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-color: #e4a4c2;
+  }
+  
+  button:disabled {
+    background-color: #ebdddd;
+    cursor: not-allowed;
+  }
+  
+  textarea {
+    height: 100px;
+    resize: none;
+    border-radius: 5px;
+  }
+
+  /* Animated sticker in the background */
+  .animated-sticker {
+      position: fixed; /* Fixed position relative to the viewport */
+      bottom: 50px; /* Position from bottom */
+      right: -80px; /* Position from right */
+      width: 460px; /* Set the size of the sticker */
+      height: 240px;
+      background-image: url('https://i.pinimg.com/originals/6b/6f/16/6b6f169ff7cc24f42c154fb8621d8705.gif'); /* Replace with your animated sticker URL */
+      background-size: contain; /* Ensure the sticker fits within the div */
+      background-repeat: no-repeat; /* Prevent repeating */
+      z-index: -1; /* Place it behind other elements */
+      animation: float 3s ease-in-out infinite; /* Add a floating animation */
+  }
+  .animated-sticker2 {
+    position: fixed; /* Fixed position relative to the viewport */
+    top: 250px; /* Position from top instead of bottom */
+    right: 250px; /* Position from right */
+    width: 150px; /* Smaller size to fit better */
+    height: 150px;
+    background-image: url('https://i.pinimg.com/originals/ab/33/48/ab3348fa510992113b25293577a8ff24.gif');
+    background-size: contain; /* Ensure the sticker fits within the div */
+    background-repeat: no-repeat; /* Prevent repeating */
+    z-index: -1; /* Place it behind other elements */
+    animation: float-top-right 3s ease-in-out infinite; /* Use a different animation */
+  }
+
+  /* Animation specifically for top-right positioned elements */
+  @keyframes float-top-right {
+    0%, 100% {
+      transform: translateY(-10px) translateX(5px); /* Move up and slightly right */
+    }
+    50% {
+      transform: translateY(10px) translateX(-5px); /* Move down and slightly left */
+    }
+  }
+.animated-sticker3 {
+  position: fixed; /* Fixed position relative to the viewport */
+  top: 150px; /* Position from top */
+  left: 100px; /* Position from left */
+  width: 100px; /* Set the size of the sticker */
+  height: 150px;
+  background-image: url('https://i.pinimg.com/originals/ab/33/48/ab3348fa510992113b25293577a8ff24.gif');
+  background-size: contain; /* Ensure the sticker fits within the div */
+  background-repeat: no-repeat; /* Prevent repeating */
+  z-index: -1; /* Place it behind other elements */
+  animation: float-top-left 3s ease-in-out infinite; /* Use a different animation */
+}
+
+/* Animation specifically for top-left positioned elements */
+@keyframes float-top-left {
+  0%, 100% {
+    transform: translateY(-10px); /* Move up */
+  }
+  50% {
+    transform: translateY(10px); /* Move down */
+  }
+}
+.animated-sticker4  {
+  position: fixed; /* Fixed position relative to the viewport */
+  bottom: 100px; /* Position from bottom */
+  left: 50px; /* Position from left instead of right */
+  width: 180px; /* Smaller size to fit better near container */
+  height: 180px;
+  background-image: url('https://i.pinimg.com/originals/ab/33/48/ab3348fa510992113b25293577a8ff24.gif');
+  background-size: contain; /* Ensure the sticker fits within the div */
+  background-repeat: no-repeat; /* Prevent repeating */
+  z-index: -1; /* Place it behind other elements */
+  animation: float-bottom-left 3s ease-in-out infinite; /* Use a specific animation */
+}
+
+/* Animation for bottom-left positioned element */
+@keyframes float-bottom-left {
+  0%, 100% {
+    transform: translateY(-8px) translateX(5px); /* Move up and slightly right */
+  }
+  50% {
+    transform: translateY(8px) translateX(-5px); /* Move down and slightly left */
+  }
+}
